@@ -25,9 +25,28 @@ productosCaros.forEach(producto => {
 
 // 3.- Crear un array con los productos, pero con el precio con IVA incluido (21%), usandomap.
 
+// Array original con precios sin IVA  
+const productos = [  
+    { descripcion: "Auriculares", precio: 49000 },  
+    { descripcion: "Teclado", precio: 30000 },  
+    { descripcion: "Ratón", precio: 15000 }  
+  ];  
+  
+  // Crear array con precio con IVA incluido  
+  const productosConIVA = productos.map(producto => {  
+    const precioConIVA = producto.precio * 1.21;  
+    return { ...producto, precio: precioConIVA.toFixed(2) };  
+  });  
+  
+  console.log(productosConIVA);  
 
 // 4.- Ordenar el array original de productos por precio de menor a mayor, usando sort.
 
+// Ordenar array original de menor a mayor  
+
+const productosOrdenados = [...productos].sort((a, b) => a.precio - b.precio);  
+
+console.log(productosOrdenados);  
 
 // 5.- Agregar un nuevo producto al final del array (por ejemplo, { descripcion: "Parlante Bluetooth", precio: 59000.90 }).
 
