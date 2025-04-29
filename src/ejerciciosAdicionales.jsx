@@ -26,7 +26,7 @@ productosCaros.forEach(producto => {
 // 3.- Crear un array con los productos, pero con el precio con IVA incluido (21%), usandomap.
 
 // Array original con precios sin IVA  
-const productos = [  
+const productosSinIva = [  
     { descripcion: "Auriculares", precio: 49000 },  
     { descripcion: "Teclado", precio: 30000 },  
     { descripcion: "Ratón", precio: 15000 }  
@@ -50,5 +50,19 @@ console.log(productosOrdenados);
 
 // 5.- Agregar un nuevo producto al final del array (por ejemplo, { descripcion: "Parlante Bluetooth", precio: 59000.90 }).
 
+productos.push({ descripcion: "Parlante Bluetooth", precio: 59000.90 });
+console.log("Producto agregado: ");
+console.log(productos);
 
 // 6.- Eliminar el producto con el precio más bajo del array. Mostrar cómo queda el array.
+
+let precioMasBajo = 0;
+
+productos.forEach((producto, minimo) => {
+  if (producto.precio < productos[precioMasBajo].precio) {
+    precioMasBajo = minimo;
+}
+});
+
+console.log("Producto con menor precio eliminado: ");
+console.log(productos);
