@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TaskInput3 from './TaskInput3';
 import TaskList3 from './TaskList3';
 
-function App3() {
+function Tarea() {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (text) => {
@@ -37,4 +37,4 @@ function App3() {
   );
 }
 
-export default App3;
+export default Tarea;

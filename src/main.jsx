@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App3 from './assets/components/App3.jsx'
+import Tarea from './assets/components/Tarea.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App3/>
+    <Tarea/>
   </StrictMode>,
 )
