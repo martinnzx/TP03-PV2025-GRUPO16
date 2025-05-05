@@ -26,7 +26,7 @@ function Tarea() {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>Lista de Tareas</h1>
+      <h3>Gestión de Tareas</h3>
       <TaskInput3 onAddTask={addTask} />
       <TaskList3
         tasks={tasks}
